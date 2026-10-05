@@ -1,0 +1,3 @@
+Percent=0, monolith=30, movies=0
+Percent=50, monolith=20, movies=10
+Percent=100, monolith=0, movies=30
