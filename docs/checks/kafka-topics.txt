@@ -1,0 +1,6 @@
+Topic: movie-events	PartitionCount: 1	ReplicationFactor: 1	Configs: segment.bytes=1073741824
+	Topic: movie-events	Partition: 0	Leader: 1001	Replicas: 1001	Isr: 1001
+Topic: user-events	PartitionCount: 1	ReplicationFactor: 1	Configs: segment.bytes=1073741824
+	Topic: user-events	Partition: 0	Leader: 1001	Replicas: 1001	Isr: 1001
+Topic: payment-events	PartitionCount: 1	ReplicationFactor: 1	Configs: segment.bytes=1073741824
+	Topic: payment-events	Partition: 0	Leader: 1001	Replicas: 1001	Isr: 1001

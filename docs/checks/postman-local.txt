@@ -1,0 +1,146 @@
+
+> cinemaabyss-api-tests@1.0.0 test:local
+> node run-tests.js --environment local --reporters=cli,htmlextra,junit
+
+Running tests against local environment...
+newman
+
+CinemaAbyss API Tests
+Using htmlextra version 1.22.3
+
+□ Monolith Service
+└ Health Check
+  GET http://127.0.0.1:8080/health [200 OK, 124B, 20ms]
+  √  Status code is 200
+
+└ Get All Users
+  GET http://127.0.0.1:8080/api/users [200 OK, 481B, 10ms]
+  √  Status code is 200
+  √  Response is an array
+
+└ Create User
+  POST http://127.0.0.1:8080/api/users [201 Created, 181B, 10ms]
+  √  Status code is 201
+  √  Response has id
+
+└ Get User by ID
+  GET http://127.0.0.1:8080/api/users?id=7 [200 OK, 176B, 5ms]
+  √  Status code is 200
+  √  User ID matches
+
+└ Get All Movies
+  GET http://127.0.0.1:8080/api/movies [200 OK, 2.39kB, 12ms]
+  √  Status code is 200
+  √  Response is an array
+
+└ Create Movie
+  POST http://127.0.0.1:8080/api/movies [201 Created, 246B, 9ms]
+  √  Status code is 201
+  √  Response has id
+
+└ Get Movie by ID
+  GET http://127.0.0.1:8080/api/movies?id=13 [200 OK, 241B, 4ms]
+  √  Status code is 200
+  √  Movie ID matches
+
+└ Create Payment
+  POST http://127.0.0.1:8080/api/payments [201 Created, 193B, 6ms]
+  √  Status code is 201
+  √  Response has id
+
+└ Get Payment by ID
+  GET http://127.0.0.1:8080/api/payments?id=7 [200 OK, 185B, 6ms]
+  √  Status code is 200
+  √  Payment ID matches
+
+└ Create Subscription
+  POST http://127.0.0.1:8080/api/subscriptions [201 Created, 235B, 8ms]
+  √  Status code is 201
+  √  Response has id
+
+└ Get Subscription by ID
+  GET http://127.0.0.1:8080/api/subscriptions?id=7 [200 OK, 230B, 2ms]
+  √  Status code is 200
+  √  Subscription ID matches
+
+□ Movies Microservice
+└ Health Check
+  GET http://127.0.0.1:8081/api/movies/health [200 OK, 124B, 5ms]
+  √  Status code is 200
+  √  Status is true
+
+└ Get All Movies
+  GET http://127.0.0.1:8081/api/movies [200 OK, 2.52kB, 11ms]
+  √  Status code is 200
+  √  Response is an array
+
+└ Create Movie
+  POST http://127.0.0.1:8081/api/movies [201 Created, 283B, 5ms]
+  √  Status code is 201
+  √  Response has id
+
+└ Get Movie by ID
+  GET http://127.0.0.1:8081/api/movies?id=14 [200 OK, 278B, 3ms]
+  √  Status code is 200
+  √  Movie ID matches
+
+□ Events Microservice
+└ Health Check
+  GET http://127.0.0.1:8082/api/events/health [200 OK, 163B, 100ms]
+  √  Status code is 200
+  √  Status is true
+
+└ Create Movie Event
+  POST http://127.0.0.1:8082/api/events/movie [201 Created, 398B, 57ms]
+  √  Status code is 201
+  √  Response has status success
+
+└ Create User Event
+  POST http://127.0.0.1:8082/api/events/user [201 Created, 420B, 20ms]
+  √  Status code is 201
+  √  Response has status success
+
+└ Create Payment Event
+  POST http://127.0.0.1:8082/api/events/payment [201 Created, 458B, 11ms]
+  √  Status code is 201
+  √  Response has status success
+
+□ Proxy Service
+└ Health Check
+  GET http://127.0.0.1:18000/health [200 OK, 164B, 59ms]
+  √  Status code is 200
+
+└ Get All Movies via Proxy
+  GET http://127.0.0.1:18000/api/movies [200 OK, 2.7kB, 46ms]
+  √  Status code is 200
+  √  Response is an array
+
+└ Get All Users via Proxy
+  GET http://127.0.0.1:18000/api/users [200 OK, 566B, 7ms]
+  √  Status code is 200
+  √  Response is an array
+
+┌─────────────────────────┬───────────────────┬──────────────────┐
+│                         │          executed │           failed │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│              iterations │                 1 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│                requests │                22 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│            test-scripts │                22 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│      prerequest-scripts │                 0 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│              assertions │                42 │                0 │
+├─────────────────────────┴───────────────────┴──────────────────┤
+│ total run duration: 4.9s                                       │
+├────────────────────────────────────────────────────────────────┤
+│ total data received: 10.09kB (approx)                          │
+├────────────────────────────────────────────────────────────────┤
+│ average response time: 18ms [min: 2ms, max: 100ms, s.d.: 24ms] │
+└────────────────────────────────────────────────────────────────┘
+Newman run completed!
+Total requests: 22
+Failed requests: 0
+Total assertions: 42
+Failed assertions: 0

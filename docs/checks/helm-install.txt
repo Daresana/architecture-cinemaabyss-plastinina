@@ -1,0 +1,6 @@
+NAME: cinemaabyss
+LAST DEPLOYED: Mon Oct 19 18:30:09 2026
+NAMESPACE: cinemaabyss
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None

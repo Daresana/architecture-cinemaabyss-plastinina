@@ -154,3 +154,8 @@ go.work
 
 # Postman tests reports
 tests/postman/reports/
+**/bin/
+**/obj/
+values.local.yaml
+dockerconfigsecret.local.yaml
+.vs/

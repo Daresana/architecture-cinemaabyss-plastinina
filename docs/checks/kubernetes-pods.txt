@@ -1,0 +1,8 @@
+NAME                              READY   STATUS    RESTARTS        AGE
+events-service-695bf9c864-szb77   1/1     Running   0               6m55s
+kafka-0                           1/1     Running   0               4m33s
+monolith-7b7c768fd7-hnztk         1/1     Running   2 (6m52s ago)   6m55s
+movies-service-796fdc6cbd-wkkkn   1/1     Running   2 (6m53s ago)   6m55s
+postgres-0                        1/1     Running   0               6m55s
+proxy-service-867987bd6c-w8jdn    1/1     Running   0               6m55s
+zookeeper-0                       1/1     Running   0               71s

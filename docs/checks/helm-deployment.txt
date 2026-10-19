@@ -1,0 +1,24 @@
+helm install cinemaabyss ./src/kubernetes/helm --namespace cinemaabyss --create-namespace
+NAME: cinemaabyss
+LAST DEPLOYED: Mon Oct 19 18:30:09 2026
+NAMESPACE: cinemaabyss
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+helm upgrade cinemaabyss ./src/kubernetes/helm --namespace cinemaabyss
+Release "cinemaabyss" has been upgraded. Happy Helming!
+NAME: cinemaabyss
+LAST DEPLOYED: Mon Oct 19 18:38:03 2026
+NAMESPACE: cinemaabyss
+STATUS: deployed
+REVISION: 2
+TEST SUITE: None
+kubectl -n cinemaabyss get pods
+NAME                              READY   STATUS    RESTARTS        AGE
+events-service-695bf9c864-szb77   1/1     Running   0               8m57s
+kafka-0                           1/1     Running   0               6m35s
+monolith-7b7c768fd7-hnztk         1/1     Running   2 (8m54s ago)   8m57s
+movies-service-796fdc6cbd-wkkkn   1/1     Running   2 (8m55s ago)   8m57s
+postgres-0                        1/1     Running   0               8m57s
+proxy-service-867987bd6c-w8jdn    1/1     Running   0               8m57s
+zookeeper-0                       1/1     Running   0               32s
