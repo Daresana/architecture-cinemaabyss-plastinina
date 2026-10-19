@@ -26,6 +26,8 @@ services:
     container_name: cinemaabyss-zookeeper
     ports:
       - "2181:2181"
+    volumes:
+      - zookeeper-data:/opt/zookeeper-3.4.13/data
     networks:
       - cinemaabyss-network
 
@@ -43,7 +45,10 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "movie-events:1:1,user-events:1:1,payment-events:1:1"
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_BROKER_ID: "1"
+      KAFKA_LOG_DIRS: /kafka/kafka-logs
     volumes:
+      - kafka-data:/kafka
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - cinemaabyss-network
@@ -142,6 +147,8 @@ services:
 
 volumes:
   postgres-data:
+  zookeeper-data:
+  kafka-data:
 
 networks:
   cinemaabyss-network:
