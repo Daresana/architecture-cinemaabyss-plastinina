@@ -1,8 +1,8 @@
 NAME                              READY   STATUS    RESTARTS        AGE
-events-service-bc4878f9c-zkd74    1/1     Running   0               4m45s
-kafka-0                           1/1     Running   1 (4m21s ago)   4m44s
-monolith-dbd75bd64-ms8jj          1/1     Running   2 (4m43s ago)   4m45s
-movies-service-5fd4645487-dbkk5   1/1     Running   2 (4m43s ago)   4m45s
-postgres-0                        1/1     Running   0               4m45s
-proxy-service-5cc585d95b-8m5sp    1/1     Running   0               4m45s
-zookeeper-0                       1/1     Running   0               4m45s
+events-service-695bf9c864-szb77   1/1     Running   0               6m55s
+kafka-0                           1/1     Running   0               4m33s
+monolith-7b7c768fd7-hnztk         1/1     Running   2 (6m52s ago)   6m55s
+movies-service-796fdc6cbd-wkkkn   1/1     Running   2 (6m53s ago)   6m55s
+postgres-0                        1/1     Running   0               6m55s
+proxy-service-867987bd6c-w8jdn    1/1     Running   0               6m55s
+zookeeper-0                       1/1     Running   0               71s

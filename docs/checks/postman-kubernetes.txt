@@ -13,52 +13,52 @@ CinemaAbyss API Tests
   √  Status code is 200
 
 └ Get All Users
-  GET http://cinemaabyss.example.com/api/users [200 OK, 303B, 12ms]
+  GET http://cinemaabyss.example.com/api/users [200 OK, 370B, 83ms]
   √  Status code is 200
   √  Response is an array
 
 └ Create User
-  POST http://cinemaabyss.example.com/api/users [201 Created, 205B, 16ms]
+  POST http://cinemaabyss.example.com/api/users [201 Created, 205B, 22ms]
   √  Status code is 201
   √  Response has id
 
 └ Get User by ID
-  GET http://cinemaabyss.example.com/api/users?id=4 [200 OK, 200B, 9ms]
+  GET http://cinemaabyss.example.com/api/users?id=5 [200 OK, 200B, 10ms]
   √  Status code is 200
   √  User ID matches
 
 └ Get All Movies
-  GET http://cinemaabyss.example.com/api/movies [200 OK, 1.4kB, 8ms]
+  GET http://cinemaabyss.example.com/api/movies [200 OK, 1.7kB, 15ms]
   √  Status code is 200
   √  Response is an array
 
 └ Create Movie
-  POST http://cinemaabyss.example.com/api/movies [201 Created, 269B, 12ms]
+  POST http://cinemaabyss.example.com/api/movies [201 Created, 268B, 11ms]
   √  Status code is 201
   √  Response has id
 
 └ Get Movie by ID
-  GET http://cinemaabyss.example.com/api/movies?id=6 [200 OK, 264B, 5ms]
+  GET http://cinemaabyss.example.com/api/movies?id=8 [200 OK, 263B, 10ms]
   √  Status code is 200
   √  Movie ID matches
 
 └ Create Payment
-  POST http://cinemaabyss.example.com/api/payments [201 Created, 217B, 13ms]
+  POST http://cinemaabyss.example.com/api/payments [201 Created, 217B, 10ms]
   √  Status code is 201
   √  Response has id
 
 └ Get Payment by ID
-  GET http://cinemaabyss.example.com/api/payments?id=4 [200 OK, 209B, 8ms]
+  GET http://cinemaabyss.example.com/api/payments?id=5 [200 OK, 209B, 10ms]
   √  Status code is 200
   √  Payment ID matches
 
 └ Create Subscription
-  POST http://cinemaabyss.example.com/api/subscriptions [201 Created, 259B, 9ms]
+  POST http://cinemaabyss.example.com/api/subscriptions [201 Created, 259B, 68ms]
   √  Status code is 201
   √  Response has id
 
 └ Get Subscription by ID
-  GET http://cinemaabyss.example.com/api/subscriptions?id=4 [200 OK, 254B, 5ms]
+  GET http://cinemaabyss.example.com/api/subscriptions?id=5 [200 OK, 254B, 4ms]
   √  Status code is 200
   √  Subscription ID matches
 
@@ -69,33 +69,33 @@ CinemaAbyss API Tests
   √  Status is true
 
 └ Get All Movies
-  GET http://cinemaabyss.example.com/api/movies [200 OK, 1.53kB, 8ms]
+  GET http://cinemaabyss.example.com/api/movies [200 OK, 1.83kB, 6ms]
   √  Status code is 200
   √  Response is an array
 
 └ Create Movie
-  POST http://cinemaabyss.example.com/api/movies [201 Created, 306B, 12ms]
+  POST http://cinemaabyss.example.com/api/movies [201 Created, 306B, 9ms]
   √  Status code is 201
   √  Response has id
 
 └ Get Movie by ID
-  GET http://cinemaabyss.example.com/api/movies?id=7 [200 OK, 301B, 6ms]
+  GET http://cinemaabyss.example.com/api/movies?id=9 [200 OK, 301B, 4ms]
   √  Status code is 200
   √  Movie ID matches
 
 □ Events Microservice
 └ Health Check
-  GET http://cinemaabyss.example.com/api/events/health [200 OK, 170B, 5ms]
+  GET http://cinemaabyss.example.com/api/events/health [200 OK, 170B, 6ms]
   √  Status code is 200
   √  Status is true
 
 └ Create Movie Event
-  POST http://cinemaabyss.example.com/api/events/movie [201 Created, 404B, 103ms]
+  POST http://cinemaabyss.example.com/api/events/movie [201 Created, 402B, 79ms]
   √  Status code is 201
   √  Response has status success
 
 └ Create User Event
-  POST http://cinemaabyss.example.com/api/events/user [201 Created, 427B, 22ms]
+  POST http://cinemaabyss.example.com/api/events/user [201 Created, 427B, 21ms]
   √  Status code is 201
   √  Response has status success
 
@@ -110,34 +110,34 @@ CinemaAbyss API Tests
   √  Status code is 200
 
 └ Get All Movies via Proxy
-  GET http://cinemaabyss.example.com/api/movies [200 OK, 1.7kB, 7ms]
+  GET http://cinemaabyss.example.com/api/movies [200 OK, 2kB, 6ms]
   √  Status code is 200
   √  Response is an array
 
 └ Get All Users via Proxy
-  GET http://cinemaabyss.example.com/api/users [200 OK, 371B, 4ms]
+  GET http://cinemaabyss.example.com/api/users [200 OK, 438B, 4ms]
   √  Status code is 200
   √  Response is an array
 
-┌─────────────────────────┬───────────────────┬──────────────────┐
-│                         │          executed │           failed │
-├─────────────────────────┼───────────────────┼──────────────────┤
-│              iterations │                 1 │                0 │
-├─────────────────────────┼───────────────────┼──────────────────┤
-│                requests │                22 │                0 │
-├─────────────────────────┼───────────────────┼──────────────────┤
-│            test-scripts │                22 │                0 │
-├─────────────────────────┼───────────────────┼──────────────────┤
-│      prerequest-scripts │                 0 │                0 │
-├─────────────────────────┼───────────────────┼──────────────────┤
-│              assertions │                42 │                0 │
-├─────────────────────────┴───────────────────┴──────────────────┤
-│ total run duration: 4.7s                                       │
-├────────────────────────────────────────────────────────────────┤
-│ total data received: 6.68kB (approx)                           │
-├────────────────────────────────────────────────────────────────┤
-│ average response time: 14ms [min: 4ms, max: 103ms, s.d.: 20ms] │
-└────────────────────────────────────────────────────────────────┘
+┌─────────────────────────┬──────────────────┬──────────────────┐
+│                         │         executed │           failed │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              iterations │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│                requests │               22 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│            test-scripts │               22 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│      prerequest-scripts │                0 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              assertions │               42 │                0 │
+├─────────────────────────┴──────────────────┴──────────────────┤
+│ total run duration: 4.9s                                      │
+├───────────────────────────────────────────────────────────────┤
+│ total data received: 7.7kB (approx)                           │
+├───────────────────────────────────────────────────────────────┤
+│ average response time: 19ms [min: 4ms, max: 83ms, s.d.: 23ms] │
+└───────────────────────────────────────────────────────────────┘
 Newman run completed!
 Total requests: 22
 Failed requests: 0

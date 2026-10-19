@@ -34,7 +34,9 @@ Postman: 22 запроса, 42 проверки, 0 ошибок.
 
 [Состояние топиков](docs/checks/kafka-topics.txt)
 
-Скриншоты Postman и Kafka UI пока не приложены.
+![Postman](docs/screenshots/postman-local.jpg)
+
+![Kafka UI](docs/screenshots/kafka-topics.jpg)
 
 # Задание 3
 
@@ -44,7 +46,7 @@ Postman: 22 запроса, 42 проверки, 0 ошибок.
 
 [API-тесты текущего коммита](.github/workflows/api-tests.yml)
 
-Запуск в GitHub Actions и публикация в GHCR ещё не выполнены.
+[GitHub Actions](https://github.com/Daresana/architecture-cinemaabyss-plastinina/actions)
 
 ### Proxy в Kubernetes
 
@@ -64,7 +66,9 @@ Postman: 22 запроса, 42 проверки, 0 ошибок.
 
 Postman: 22 запроса, 42 проверки, 0 ошибок.
 
-Скриншоты списка фильмов и логов пока не приложены.
+![HTTPS API movies](docs/screenshots/kubernetes-movies.jpg)
+
+![Обработка событий](docs/screenshots/kubernetes-events.jpg)
 
 # Задание 4
 
@@ -90,4 +94,6 @@ Postman: 22 запроса, 42 проверки, 0 ошибок.
 
 [Логи обработки событий](docs/checks/helm-events.txt)
 
-Скриншоты установки и списка фильмов пока не приложены.
+![Helm install и upgrade](docs/screenshots/helm-deployment.jpg)
+
+![HTTPS API movies после Helm](docs/screenshots/helm-movies.jpg)
